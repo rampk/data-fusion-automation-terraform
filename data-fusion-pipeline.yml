@@ -1,4 +1,5 @@
 project details:
+        file_path: '/template/terraform/project_create.tf'
         project_name: tf-automation-57
         project_id: tf-automation-57
 
