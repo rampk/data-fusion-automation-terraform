@@ -30,7 +30,7 @@ def substitute_template(config_object, config_name, template_content):
             # If place holder name not found in config, throw an error
             if key not in place_holders:
                 raise SystemExit(f'{key} in {config_name} not exists')
-            line = line.replace(f'{{{{{key}}}}}',config_object[key]) # Substitute the placeholder
+            line = line.replace(f'{{{{{key}}}}}',f'"{config_object[key]}"') # Substitute the placeholder
             template_out.append(line)
 
     return template_out
