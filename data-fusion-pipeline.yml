@@ -2,4 +2,9 @@ project details:
         file_path: '/template/terraform/project_create.tf'
         project_name: tf-automation-57
         project_id: tf-automation-57
-
+df instance details:
+        file_path: '/template/terraform/df_instance_create.tf'
+        instance_name: data-fusion-instance
+        project_id: tf-automation-57
+gcp authentication:
+        file_path: '/template/terraform/gcp_authentication.tf'
