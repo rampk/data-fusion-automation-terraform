@@ -57,10 +57,19 @@ def write_main_tf(main_tf):
     """Write to main.tf"""
     # Destination path for main.tf
     curr_folder = os.getcwd()
-    main_dest = curr_folder + '/source_code/terraform/main.tf'   
+    main_dest = curr_folder + '/source_code/terraform/main.tf'
+    src_provider = curr_folder + '/template/terraform/provider.tf'   
+
+    #provider_tf = []
+    # Write provider into main.tf
+    with open(src_provider,'r') as file:
+        provider_tf = file.readlines()
 
     # Write to main.tf
     with open(main_dest,'w') as file:
+        for line in provider_tf:
+            file.write(line)
+            
         for line in main_tf:
             file.write(line)
 
@@ -85,6 +94,6 @@ if __name__ == "__main__":
 
     ## Write to the source code
     write_main_tf(main_terraform)
-    write_provider()
+    #write_provider()
     
     
